@@ -1,0 +1,30 @@
+:root { /* background-color: var(--main-color); */
+ --background-black : rgb(37, 37, 37);
+ --color-whitesmoke : whitesmoke;
+}
+
+
+header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background-black);
+    color: var(--color-whitesmoke);
+}
+
+#navbar ol {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: space-around;
+}
+
+li {
+     list-style-type: none;
+     margin: 0 10px;
+}
+
+.fa-brands {
+  color: var(--color-whitesmoke);
+}
