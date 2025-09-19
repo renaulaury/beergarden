@@ -1,19 +1,41 @@
-:root { /* background-color: var(--main-color); */
- --background-black : rgb(37, 37, 37);
+:root { 
+ --background-black : rgba(34, 34, 34, 0.8); 
  --color-whitesmoke : whitesmoke;
 }
 
-
-header {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--background-black);
-    color: var(--color-whitesmoke);
+/* ------------- header ------------- */
+.skip-link {
+  background-color: var(--background-black);
 }
 
-#navbar ol {
+h1 {
+  font-size: 1rem;
+}
+
+a
+{
+  text-decoration: none;
+  color: var(--color-whitesmoke)
+}
+
+ header {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+}
+
+#navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--background-black);
+  color: var(--color-whitesmoke); 
+}
+
+
+ul {
     display: flex;
     flex-direction: row;    
     align-items: center;
@@ -28,3 +50,7 @@ li {
 .fa-brands {
   color: var(--color-whitesmoke);
 }
+
+#network-link a{
+  margin: 0 10px;
+} 
