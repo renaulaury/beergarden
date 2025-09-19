@@ -176,8 +176,23 @@ q {
   height: auto;
 }
 
-
 /* ------------- services ------------- */
+#services {
+display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+}
+
+#services h3 {
+  padding: 5px 0;
+}
+
+#services p {
+   font-weight: lighter; /*--------- A voir avec ici----------- */
+}
 
 /* ------------- paralax ------------- */
 
