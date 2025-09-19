@@ -188,6 +188,7 @@ display: grid;
 
 #services h3 {
   padding: 5px 0;
+  text-transform: uppercase;
 }
 
 #services p {
@@ -195,6 +196,16 @@ display: grid;
 }
 
 /* ------------- paralax ------------- */
+#paralax {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#paralax h2 {
+  text-transform: uppercase;
+}
 
 /* ------------- google map ------------- */
 
