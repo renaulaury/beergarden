@@ -1,7 +1,9 @@
 :root { 
  --background-black: rgba(34, 34, 34, 0.8); 
  --color-whitesmoke: whitesmoke;
+ --color-lightgrey: rgb(184, 181, 181);
  --background-quote: rgb(245, 201, 107);
+ --background-hover: rgb(248, 184, 44);
  --font-oswald: 'oswald', sans-serif;
  --font-raleway: 'ralewey', sans-serif;
 }
@@ -51,6 +53,15 @@ li {
      text-transform: uppercase;
 }
 
+#navbar a:hover  {
+  color: var(--color-lightgrey)
+}
+
+.fa-brands:hover  {
+  color: var(--color-lightgrey)
+  /* color:red; */
+}
+
 .fa-brands {
   color: var(--color-whitesmoke);
 }
@@ -90,7 +101,7 @@ q {
 }
 
 /* ------------- commun sections ci-après ------------- */
-#traditions, #gallery, #services, #google-map {
+#traditions, #gallery, #services {
   padding-top: 100px;
 }
 
@@ -138,6 +149,9 @@ q {
   border-radius: 3px;
   background-color: var(--background-quote);  
 }
+.traditions-button a:hover {
+  background-color: var(--background-hover);
+}
 
 .traditions-block2 {  
   background-image: url('/assets/img/h5-revolution-img-1.jpg');
@@ -178,6 +192,13 @@ q {
   height: auto;
 }
 
+#gallery img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  color: var(--background-quote);/* ------------------ a travailler ------------ */
+}
+
 /* ------------- services ------------- */
 #services {
   display: grid;
@@ -193,6 +214,10 @@ q {
 #services h3 {
   padding: 5px 0;
   text-transform: uppercase;
+}
+
+#services h3:hover {
+  color: var(--background-quote);
 }
 
 #services p {
@@ -222,10 +247,26 @@ q {
 }
 
 /* ------------- google map ------------- */
-/* 
+
 #google-map {
   width: 100%;
-} */
+  position: relative;
+} 
+
+iframe {
+  width: 100%;
+  height: 450px;
+}
+
+.google-map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  z-index: 1; 
+}
 
 /* ------------- footer ------------- */
 footer {
