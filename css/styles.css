@@ -90,7 +90,7 @@ q {
 }
 
 /* ------------- commun sections ci-après ------------- */
-#traditions, #gallery, #services, #paralax, #google-map {
+#traditions, #gallery, #services, #google-map {
   padding-top: 100px;
 }
 
@@ -201,17 +201,31 @@ q {
 
 /* ------------- paralax ------------- */
 #paralax {
+  background-image: url("/assets/img/h5-el-holder-img-2.jpg");
+  margin-top: 100px;
+  padding: 50px 0;
+  color: var(--color-whitesmoke);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  /* Effet de paralax */
+  background-attachment: fixed; /* Permet de faire le défilement sur l'image */
+  background-size: cover; 
+  background-position: center; 
 }
 
 #paralax h2 {
   text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
 /* ------------- google map ------------- */
+/* 
+#google-map {
+  width: 100%;
+} */
 
 /* ------------- footer ------------- */
 footer {
