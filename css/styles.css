@@ -30,6 +30,7 @@ header {
   top: 0; 
   left: 0; 
   width: 100%; 
+  z-index: 1000;
 }
 
 #navbar {
@@ -38,21 +39,21 @@ header {
   align-items: center;
   justify-content: space-around;
   background-color: var(--background-black);
-  color: var(--color-whitesmoke); 
+  color: var(--color-whitesmoke);   
 }
 
 
 ul {
-    display: flex;
-    flex-direction: row;    
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;    
+  align-items: center;
+  justify-content: space-around;
 }
 
 li {
-     list-style-type: none;
-     margin: 0 10px;
-     text-transform: uppercase;
+  list-style-type: none;
+  margin: 0 10px;
+  text-transform: uppercase;
 }
 
 #navbar a:hover  {
@@ -96,9 +97,12 @@ li {
 }
 
 q {
-  font-size: 2rem ;
+  font-size: 3rem ;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
+  color: var(--color-whitesmoke);
+
 }
 
 /* ------------- commun sections ci-après ------------- */
@@ -136,9 +140,10 @@ q {
 }
 
 .traditions-text {
-  font-family: var(--font-raleway);
   padding: 0 80px;
-  /* font-weight: lighter; ------------------ a revoir*/
+  font-family: var(--font-raleway);
+  font-weight: lighter;
+  font-size: large;
 }
 
 .traditions-button {
@@ -206,10 +211,6 @@ q {
   transform: scale(1.1); /* 10% */
 }
 
-/* .gallery-overlay {
-  display: none;
-} */
-
 .gallery-overlay {
   background-color: var(--background-hover);
   color: black;
@@ -236,7 +237,7 @@ q {
 
 .fa-plus:hover {
   color:var(--color-hover-plus-gallery);
-   transform: rotate(180deg); /* arrivée */
+  transform: rotate(180deg); /* arrivée */
 }
 
 .gallery-container-img:hover .gallery-overlay {
@@ -314,7 +315,11 @@ iframe {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); 
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,   
+    rgba(0, 0, 0, 0.6) 50%,  
+    rgba(0, 0, 0, 0.9) 100% );  
   z-index: 1; 
 }
 
