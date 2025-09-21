@@ -3,9 +3,11 @@
  --color-whitesmoke: whitesmoke;
  --color-lightgrey: rgb(184, 181, 181);
  --background-quote: rgb(245, 201, 107);
- --background-hover: rgb(248, 184, 44);
+ --background-hover: rgb(248, 184, 44, 0.6);
  --font-oswald: 'oswald', sans-serif;
  --font-raleway: 'ralewey', sans-serif;
+ --color-plus-gallery: rgb(5, 5, 5, 0.6);
+ --color-hover-plus-gallery: rgb(5, 5, 5, 0.8);
 }
 
 /* ------------- header ------------- */
@@ -59,7 +61,6 @@ li {
 
 .fa-brands:hover  {
   color: var(--color-lightgrey)
-  /* color:red; */
 }
 
 .fa-brands {
@@ -101,7 +102,7 @@ q {
 }
 
 /* ------------- commun sections ci-après ------------- */
-#traditions, #gallery, #services {
+#traditions, #services, #gallery {
   padding-top: 100px;
 }
 
@@ -149,6 +150,7 @@ q {
   border-radius: 3px;
   background-color: var(--background-quote);  
 }
+
 .traditions-button a:hover {
   background-color: var(--background-hover);
 }
@@ -175,7 +177,6 @@ q {
   height: auto;
 }
 
-
 /* ------------- gallery ------------- */
 
 #gallery {
@@ -187,17 +188,61 @@ q {
   margin: auto;
 }
 
-#gallery img {
-  max-width: 100%;
-  height: auto;
+.gallery-container-img {
+  overflow: hidden;
+  position: relative;
 }
 
-#gallery img:hover {
-  transform: scale(1.05);
+.gallery-container-img img{
+  display:block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1) ; /* depart */
   transition: transform 0.3s ease;
-  cursor: pointer;
-  color: var(--background-quote);/* ------------------ a travailler ------------ */
 }
+
+.gallery-container-img:hover img {
+  transform: scale(1.1); /* 10% */
+}
+
+/* .gallery-overlay {
+  display: none;
+} */
+
+.gallery-overlay {
+  background-color: var(--background-hover);
+  color: black;
+
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; 
+  
+  opacity: 0;
+}
+
+.fa-plus {
+  color:var(--color-plus-gallery);
+  font-size: 8rem;
+  transition: transform 0.3s ease-in-out; /* depart */
+}
+
+.fa-plus:hover {
+  color:var(--color-hover-plus-gallery);
+   transform: rotate(180deg); /* arrivée */
+}
+
+.gallery-container-img:hover .gallery-overlay {
+  opacity: 1; 
+}
+
 
 /* ------------- services ------------- */
 #services {
@@ -210,6 +255,7 @@ q {
   justify-items: center;
   margin: auto;
 }
+
 
 #services h3 {
   padding: 5px 0;
@@ -280,3 +326,4 @@ footer {
 footer img {
   height: 10px;
 }
+
