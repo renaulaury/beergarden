@@ -270,6 +270,10 @@ q {
    font-weight: lighter; /*--------- A voir avec ici----------- */
 }
 
+#services img:hover {
+  background-color: var(--background-quote);;
+}
+
 /* ------------- paralax ------------- */
 #paralax {
   background-image: url("/assets/img/h5-el-holder-img-2.jpg");
