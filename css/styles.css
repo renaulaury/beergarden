@@ -47,6 +47,22 @@ header {
   color: var(--color-whitesmoke);   
 }
 
+#navbar ul.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10%;
+    top: 60%; 
+    background-color: var(--background-black);
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+    text-align: left;
+    padding: 3%;
+    gap: 20px;
+}
+
 ul {
   display: flex;
   flex-direction: row;    
@@ -75,6 +91,54 @@ li {
 #network-link a{
   margin: 0 10px;
 } 
+
+/* burger */
+#burgerButton {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+#burgerButton .line {
+    width: 40px;
+    height: 3px; 
+    background-color: var(--color-whitesmoke);
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+#burgerButton .line:nth-child(1) {
+    top: 10px;
+}
+
+#burgerButton .line:nth-child(2) {
+    top: 22px;
+}
+
+#burgerButton .line:nth-child(3) {
+    top: 34px;
+}
+
+#burgerButton.open .line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 22px;
+}
+
+#burgerButton.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+#burgerButton.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 22px;
+} 
+
 
 /* ------------- welcome ------------- */
 

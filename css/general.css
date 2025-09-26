@@ -22,7 +22,13 @@ body {
     margin-top: 50px;
   }
 
-  
+#burgerButton {
+    display: flex;
+  }
+
+  #navbar ul {
+    display: none;
+  }
 
 }
 
