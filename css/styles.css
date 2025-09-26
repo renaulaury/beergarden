@@ -10,6 +10,11 @@
  --color-hover-plus-gallery: rgb(5, 5, 5, 0.8);
 }
 
+/* ------------- commun ------------- */
+a:focus, button:focus {
+  background-color: var(--background-hover);
+}
+
 /* ------------- header ------------- */
 .skip-link {
   background-color: var(--background-black);
