@@ -8,4 +8,21 @@ body {
   font-family: var( --font-oswald);
 }
 
+@media (max-width: 900px) {
+  .traditions-article1, .traditions-article2 {
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .traditions-block1, .traditions-block2 {
+    width: 100%;
+  }
+
+  .traditions-article2 {
+    margin-top: 50px;
+  }
+
+  
+
+}
 
